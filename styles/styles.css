@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+header {
+  background-color: #17233c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header img {
+  width: 100px;
+}
+
+
+/* ==========================================
+   TIPOGRAFÍA Y BASES GENERALES
+   ========================================== */
+body {
+  font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* ==========================================
+   HEADER / NAVBAR
+   ========================================== */
+/* Efecto traslúcido y sombra elegante */
+.navbar {
+  background-color: rgba(23, 35, 60, 0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tamaño controlado para el logo del header */
+.navbar-brand img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.03);
+}
+
+/* Enlaces del menú con línea indicadora al pasar el mouse */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding: 0.5rem 0.8rem !important;
+  transition: color 0.25s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #38bdf8; /* Celeste moderno de acento */
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #38bdf8 !important;
+}
+
+/* Botón hamburguesa en mobile */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Asegura que el icono sea blanco sobre fondo oscuro */
+}
+
+
+
+
+/* 2. Botón Secundario: Borde azul oscuro */
+.btn-outline-custom {
+  background-color: #ffffff;
+  color: #17233c;
+  border: 2px solid #17233c;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-outline-custom:hover {
+  background-color: #17233c;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+:vertica/* Ajustes para el Carrusel de Banners */
+#heroCarousel {
+  background-color: #17233c;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Indicadores dorados acordes al branding */
+#heroCarousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#heroCarousel .carousel-indicators .active {
+  background-color: #fccb00;
+  border-color: #c9961a;
+  transform: scale(1.25);
+}
+
+/* Flechas con fondo sutil */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+  width: 5%;
+  opacity: 0.7;
+}
+
+#heroCarousel .carousel-control-prev:hover,
+#heroCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+
+
+
+/* ==========================================
+   SECCIÓN: POR QUÉ ES DIFERENTE
+   ========================================== */
+.section-diferente {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-diferente .section-title {
+  color: #17233c;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+.section-diferente .section-lead {
+  color: #475569;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+/* Enlace estilizado con flecha animada */
+.btn-comite {
+  color: #17233c;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 4px;
+  transition: all 0.25s ease;
+}
+
+.btn-comite i {
+  transition: transform 0.25s ease;
+}
+
+.btn-comite:hover {
+  color: #0284c7;
+  border-color: #0284c7;
+}
+
+.btn-comite:hover i {
+  transform: translateX(5px);
+}
+
+
+/* ==========================================
+   ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
+   ========================================== */
+.custom-accordion .accordion-item {
+  border-color: #e2e8f0 !important;
+}
+
+.custom-accordion .accordion-button {
+  color: #17233c;
+  background-color: #ffffff;
+  font-size: 1.05rem;
+  padding: 1.25rem;
+  box-shadow: none !important;
+}
+
+/* Estado cuando la pregunta está desplegada */
+.custom-accordion .accordion-button:not(.collapsed) {
+  color: #17233c;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Cambiar el tono del chevron/flechita al desplegar */
+.custom-accordion .accordion-button::after {
+  filter: brightness(0.2);
+}
+
+.custom-accordion .accordion-body {
+  line-height: 1.65;
+  font-size: 0.95rem;
+  padding: 1.25rem;
+}
+
+.titulo-dorado {
+  background: linear-gradient(135deg, #c9961a 0%, #fccb00 30%, #fffad2 50%, #f2dc8e 70%, #c9961a 100%);
+  -webkit-background-clip: text;
+background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Fundamental para que tome el clip en títulos */
+}
+
+/* Tarjeta de hotel en azul institucional con recuadro dorado */
+.card-hotel-azul {
+  background-color: #17233c !important;
+  border: 1px solid #c9961a !important; /* Borde base dorado */
+  box-shadow: 0 4px 15px rgba(201, 150, 26, 0.15); /* Sutil resplandor cálido */
+}
+
+/* Opcional: si querés que el borde tenga el mismo degradado dorado continuo */
+.card-hotel-azul-gradient {
+  background-color: #17233c !important;
+  border: 2px solid transparent !important;
+  background-image: linear-gradient(#17233c, #17233c), 
+                    linear-gradient(135deg, #c9961a 0%, #fccb00 30%, #fffad2 50%, #f2dc8e 70%, #c9961a 100%) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+}
+
+
+/* Botón dorado metálico sobre fondo azul */
+.btn-dorado-hotel {
+  background: transparent;
+  color: #f2dc8e;
+  border: 1px solid #c9961a;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-dorado-hotel:hover {
+  background: linear-gradient(135deg, #c9961a 0%, #fccb00 30%, #fffad2 50%, #f2dc8e 70%, #c9961a 100%);
+  color: #17233c;
+  font-weight: 600;
+  border-color: #fccb00;
+  box-shadow: 0 4px 12px rgba(201, 150, 26, 0.3);
+}
+
+
+
+
+/* Botones de filtro de Disertantes */
+.filter-btn {
+  color: #17233c;
+  border-color: #cbd5e1;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #17233c !important;
+  border-color: #17233c !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(23, 35, 60, 0.15);
+}
+
+
+/* ==========================================
+   ESTILOS FOOTER
+   ========================================== */
+/* Textos secundarios del footer con buen contraste sobre fondo oscuro */
+.text-footer-muted {
+  color: #cbd5e1 !important;
+}
+
+/* Enlaces de navegación del footer */
+.footer-link {
+  color: #e2e8f0 !important;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #fccb00 !important;
+  transform: translateX(4px);
+}
+
+/* Botones circulares de redes en el footer */
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  transition: all 0.25s ease;
+}
+
+.footer-social-btn:hover {
+  background-color: #c9961a !important;
+  border-color: #c9961a !important;
+  color: #17233c !important;
+  transform: translateY(-2px);
+}
+
+.footer-credit-link {
+  transition: color 0.25s ease, text-decoration 0.25s ease;
+}
+
+.footer-credit-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
