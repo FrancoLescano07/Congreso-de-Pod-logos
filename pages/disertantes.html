@@ -106,7 +106,7 @@
       <!-- Grilla de Disertantes -->
       <div class="row g-4" id="speaker-grid">
 
-        <!-- 1. DISERTANTE CONFIRMADO 1: Dr. Alfonso Martínez Nova -->
+       <!-- 1. DISERTANTE CONFIRMADO 1: Dr. Alfonso Martínez Nova -->
         <div class="col-md-6 col-lg-4 speaker-item" data-category="internacional">
           <div class="card h-100 border rounded-4 overflow-hidden shadow-sm d-flex flex-column bg-white">
             <div class="position-relative" style="background-color: #17233c;">
@@ -117,13 +117,22 @@
             </div>
             <div class="card-body p-4 d-flex flex-column">
               <h5 class="fw-bold mb-1" style="color: #17233c;">Dr. Alfonso Martínez Nova</h5>
-              <div class="text-primary small fw-semibold mb-3">
+              <div class="text-primary small fw-semibold mb-2">
                 Universidad de Extremadura (España)
               </div>
-              <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6;">
+              <p class="small text-muted mb-3" style="line-height: 1.6;">
                 Doctor en Podología y Profesor de la Universidad de Extremadura. Máster en Podología Quirúrgica por la Universidad de Barcelona.
               </p>
-              <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+
+              <div class="small mb-3" style="color: #17233c;">
+                <strong>Disertaciones:</strong>
+                <ul class="ps-3 mb-0 mt-1 small" style="line-height: 1.5;">
+                  <li>«Protocolo de captura biométrica»</li>
+                  <li>«Tratamiento de la metatarsalgia con biomecánica de descarga»</li>
+                </ul>
+              </div>
+
+              <div class="pt-3 border-top mt-auto d-flex align-items-center justify-content-between">
                 <span class="badge bg-light text-secondary border">Docencia e Investigación</span>
                 <span class="text-muted small"><i class="bi bi-patch-check-fill text-primary"></i> Confirmado</span>
               </div>
@@ -131,7 +140,41 @@
           </div>
         </div>
 
-        <!-- 2. PLACEHOLDER INTERNACIONAL -->
+        
+<!-- 2. DISERTANTE NACIONAL: Lic. Élida Yolanda Espinoza -->
+        <div class="col-md-6 col-lg-4 speaker-item" data-category="nacional">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm d-flex flex-column bg-white">
+            <div class="position-relative" style="background-color: #17233c;">
+              <img src="../img/elida-espinoza.png" 
+                   alt="Lic. Élida Yolanda Espinoza" 
+                   class="w-100 d-block" 
+                   style="aspect-ratio: 1 / 1; object-fit: contain;">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h5 class="fw-bold mb-1" style="color: #17233c;">Lic. Élida Yolanda Espinoza</h5>
+              <div class="text-primary small fw-semibold mb-2">
+                Inst. San Judas Tadeo (Tucumán)
+              </div>
+              <p class="small text-muted mb-3" style="line-height: 1.6;">
+                Lic. en Podología y Diplomada en Pie Diabético. Ex docente de la Tecnicatura en Podología.
+              </p>
+
+              <div class="small mb-3" style="color: #17233c;">
+                <strong>Disertación:</strong>
+                <ul class="list-unstyled ps-2 mb-0 mt-1 small" style="line-height: 1.5;">
+                  <li>• «La piel que habla: signos de enfermedad venosa crónica desde la mirada podológica»</li>
+                </ul>
+              </div>
+
+              <div class="pt-3 border-top mt-auto d-flex align-items-center justify-content-between">
+                <span class="badge bg-light text-secondary border">Pie Diabético</span>
+                <span class="text-muted small"><i class="bi bi-patch-check-fill text-primary"></i> Confirmado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. PLACEHOLDER INTERNACIONAL -->
         <div class="col-md-6 col-lg-4 speaker-item" data-category="internacional">
           <div class="card h-100 border rounded-4 overflow-hidden shadow-sm d-flex flex-column bg-white">
             <div class="position-relative" style="background-color: #17233c;">
@@ -158,32 +201,6 @@
           </div>
         </div>
 
-        <!-- 3. PLACEHOLDER NACIONAL -->
-        <div class="col-md-6 col-lg-4 speaker-item" data-category="nacional">
-          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm d-flex flex-column bg-white">
-            <div class="position-relative" style="background-color: #17233c;">
-              <img src="../img/muy-pronto.png" 
-                   alt="Muy pronto más información" 
-                   class="w-100 d-block" 
-                   style="aspect-ratio: 1 / 1; object-fit: contain;">
-            </div>
-            <div class="card-body p-4 d-flex flex-column text-center">
-              <div class="my-auto py-2">
-                <span class="badge px-3 py-2 rounded-pill text-uppercase fw-semibold mb-3" 
-                      style="background-color: rgba(23, 35, 60, 0.08); color: #17233c; font-size: 0.8rem; letter-spacing: 1px;">
-                  <i class="bi bi-hourglass-split me-1"></i> Muy pronto
-                </span>
-                <h5 class="fw-bold text-muted mb-2">Disertante Nacional</h5>
-                <p class="small text-muted mb-0">
-                  Especialistas y autoridades podológicas de destacada trayectoria en Argentina.
-                </p>
-              </div>
-              <div class="pt-3 border-top mt-auto d-flex align-items-center justify-content-center">
-                <span class="text-muted small"><i class="bi bi-clock-history me-1"></i> A confirmar</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- 4. TARJETA NUEVA: Muy Pronto - Internacional -->
         <div class="col-md-6 col-lg-4 speaker-item" data-category="internacional">
